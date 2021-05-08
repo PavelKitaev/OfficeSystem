@@ -1,0 +1,6 @@
+﻿  ServerS.cpp
+D:\unn\PROJECT_ASD\ServerSv3\ServerS\ServerS.cpp(93,20): warning C4018: <: несоответствие типов со знаком и без знака
+D:\unn\PROJECT_ASD\ServerSv3\ServerS\ServerS.cpp(114,20): warning C4018: <: несоответствие типов со знаком и без знака
+D:\unn\PROJECT_ASD\ServerSv3\ServerS\ServerS.cpp(126,20): warning C4018: <: несоответствие типов со знаком и без знака
+D:\unn\PROJECT_ASD\ServerSv3\ServerS\ServerS.cpp(233,21): warning C4018: <: несоответствие типов со знаком и без знака
+  ServerS.vcxproj -> D:\unn\PROJECT_ASD\ServerSv3\Debug\ServerS.exe

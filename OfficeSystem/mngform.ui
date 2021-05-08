@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MngForm</class>
+ <widget class="QWidget" name="MngForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1221</width>
+    <height>633</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="minimumSize">
+      <size>
+       <width>1170</width>
+       <height>610</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lato</family>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTabWidget::pane { /* Рамка виджета со вкладками */
+	 border: 2px solid rgb(1, 140, 234); 
+     border-radius: 15px;
+     padding: 6px;
+ } 
+
+ QTabWidget::tab-bar {
+     left: 15px; /* сдвигаем вправо на 5px */
+ }
+
+ QTabBar::tab {
+color: rgb(1, 140, 234);
+     background: white;
+     border-bottom-color: #C2C7CB;
+
+	 border: 1px solid rgb(1, 140, 234);
+	 border-bottom-color: white;
+     border-top-left-radius: 4px;
+     border-top-right-radius: 4px;
+     min-width: 35ex;
+     padding: 7px;
+
+ }
+
+ QTabBar::tab:selected, QTabBar::tab:hover {
+     background: white;
+
+ border: 3px solid rgb(1, 140, 234);
+ }
+
+ QTabBar::tab:selected {
+     border-color: rgb(6, 145, 239);
+     border-bottom-color: rgb(6, 145, 239); 
+ }
+
+ QTabBar::tab:!selected {
+     margin-top: 5px; /* делаем невыбранные вкладки меньше */
+ }</string>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="chatTab">
+      <attribute name="title">
+       <string>Чат</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="noteTab">
+      <attribute name="title">
+       <string>Заметки</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="profileTab">
+      <attribute name="title">
+       <string>Профиль</string>
+      </attribute>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

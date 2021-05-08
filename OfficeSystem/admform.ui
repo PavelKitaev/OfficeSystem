@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AdmForm</class>
+ <widget class="QWidget" name="AdmForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1289</width>
+    <height>996</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lato</family>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTabWidget::pane { /* Рамка виджета со вкладками */
+	 border: 2px solid rgb(1, 140, 234); 
+     border-radius: 15px;
+     padding: 6px;
+ } 
+
+ QTabWidget::tab-bar {
+     left: 15px; /* сдвигаем вправо на 5px */
+ }
+
+ QTabBar::tab {
+color: rgb(1, 140, 234);
+     background: white;
+     border-bottom-color: #C2C7CB;
+
+	 border: 1px solid rgb(1, 140, 234);
+	 border-bottom-color: white;
+     border-top-left-radius: 4px;
+     border-top-right-radius: 4px;
+     min-width: 35ex;
+     padding: 7px;
+
+ }
+
+ QTabBar::tab:selected, QTabBar::tab:hover {
+     background: white;
+
+ border: 3px solid rgb(1, 140, 234);
+ }
+
+ QTabBar::tab:selected {
+     border-color: rgb(6, 145, 239);
+     border-bottom-color: rgb(6, 145, 239); 
+ }
+
+ QTabBar::tab:!selected {
+     margin-top: 5px; /* делаем невыбранные вкладки меньше */
+ }</string>
+     </property>
+     <property name="tabPosition">
+      <enum>QTabWidget::North</enum>
+     </property>
+     <property name="tabShape">
+      <enum>QTabWidget::Rounded</enum>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <property name="elideMode">
+      <enum>Qt::ElideNone</enum>
+     </property>
+     <property name="tabBarAutoHide">
+      <bool>false</bool>
+     </property>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>Управление</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetMinAndMaxSize</enum>
+       </property>
+       <property name="horizontalSpacing">
+        <number>2</number>
+       </property>
+       <property name="verticalSpacing">
+        <number>20</number>
+       </property>
+       <item row="2" column="0" alignment="Qt::AlignRight">
+        <widget class="QLineEdit" name="le_pass">
+         <property name="minimumSize">
+          <size>
+           <width>350</width>
+           <height>45</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Lato</family>
+           <pointsize>14</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::WheelFocus</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit{
+	background-color: white ;
+
+	border-style: solid;
+	border-width: 10px;
+	border-color: white;
+	border-radius: 15px;
+
+	font:  14pt;
+	color: rgb(1, 140, 234);
+}</string>
+         </property>
+         <property name="placeholderText">
+          <string>Пароль</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Maximum</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="1" column="0" alignment="Qt::AlignRight">
+        <widget class="QLineEdit" name="le_login">
+         <property name="minimumSize">
+          <size>
+           <width>350</width>
+           <height>45</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Lato</family>
+           <pointsize>14</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::WheelFocus</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit{
+	background-color: white ;
+
+	border-style: solid;
+	border-width: 10px;
+	border-color: white;
+	border-radius: 15px;
+
+	font:  14pt;
+	color: rgb(1, 140, 234);
+}</string>
+         </property>
+         <property name="placeholderText">
+          <string>Логин</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0" alignment="Qt::AlignRight">
+        <widget class="QLineEdit" name="le_unit">
+         <property name="minimumSize">
+          <size>
+           <width>350</width>
+           <height>45</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Lato</family>
+           <pointsize>14</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::WheelFocus</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit{
+	background-color: white ;
+
+	border-style: solid;
+	border-width: 10px;
+	border-color: white;
+	border-radius: 15px;
+
+	font:  14pt;
+	color: rgb(1, 140, 234);
+}</string>
+         </property>
+         <property name="placeholderText">
+          <string>Подразделение</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0" alignment="Qt::AlignRight">
+        <widget class="QLineEdit" name="le_fio">
+         <property name="minimumSize">
+          <size>
+           <width>350</width>
+           <height>45</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Lato</family>
+           <pointsize>14</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::WheelFocus</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit{
+	background-color: white ;
+
+	border-style: solid;
+	border-width: 10px;
+	border-color: white;
+	border-radius: 15px;
+
+	font:  14pt;
+	color: rgb(1, 140, 234);
+}</string>
+         </property>
+         <property name="placeholderText">
+          <string>ФИО</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2" rowspan="7">
+        <widget class="QTableView" name="tableView">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+           <horstretch>255</horstretch>
+           <verstretch>255</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>700</width>
+           <height>400</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>1000</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QTableView {
+    background: white;
+    font-size: 14pt;
+
+	border-style: solid;
+	border-width: 10px;
+	border-color: white;
+	border-radius: 15px;
+	color: rgb(4, 69, 87);
+}
+
+QHeaderView
+{
+	height: 30px;
+	color: rgb(76, 155, 235);
+    font-size: 15pt;
+	background: white;
+	border: none;
+	border-bottom: 2px solid rgb(1, 140, 234);
+}
+
+QHeaderView::section:vertical
+{
+	background: white;
+	width: 25px;
+	border: 0px solid white;
+	border-right: 2px solid rgb(1, 140, 234);
+	color: rgb(76, 155, 235);
+	font-size: 15pt;
+}
+
+QTableView QTableCornerButton::section {
+     background: white;
+     border: none;
+ }
+
+QTableView {
+	selection-color: black;
+    selection-background-color: rgba(1, 140, 234, 50);
+}</string>
+         </property>
+         <property name="gridStyle">
+          <enum>Qt::SolidLine</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Maximum</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>1</width>
+           <height>210</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="7" column="0" alignment="Qt::AlignLeft">
+        <widget class="QPushButton" name="bt_refresh">
+         <property name="minimumSize">
+          <size>
+           <width>200</width>
+           <height>45</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>200</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Lato</family>
+           <pointsize>14</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::WheelFocus</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton:enabled{
+	background-color: white;
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 15px;
+	border-color: rgb(1, 140, 234);
+
+	font: 14pt;
+	padding: 6px;
+	color: rgb(1, 140, 234);
+ }
+ QPushButton:default {
+     border-color: navy; /* делаем кнопку по умолчанию выпуклой */
+ }
+
+QPushButton:hover{
+ 	background-color: rgb(246, 246, 246);
+}
+
+
+QPushButton:pressed {
+     background-color: rgb(240, 240, 240);
+ }</string>
+         </property>
+         <property name="text">
+          <string>Обновить таблицу</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0" alignment="Qt::AlignRight">
+        <widget class="QComboBox" name="cb_role">
+         <property name="minimumSize">
+          <size>
+           <width>350</width>
+           <height>45</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Lato</family>
+           <pointsize>14</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QListView
+{
+    color: rgb(1, 140, 234);
+}
+
+QComboBox:first
+{
+    color: red;
+}
+
+QComboBox{
+padding: 3px ;
+
+	background-color: white ;
+	border-style: solid;
+	border-width: 10px;
+	border-color: white;
+
+	border-radius: 15px;
+	border-color: white;
+
+	font:  14pt;
+	color: rgb(1, 140, 234);
+ }
+
+QComboBox::drop-down {
+	color: white;
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 60px;
+
+    border-top-right-radius: 10px; 
+    border-bottom-right-radius: 10px;
+}
+
+QComboBox::down-arrow {
+    image: url(:/image/arrow-1.png);
+}
+
+QComboBox::down-arrow:on {
+    top: 3px;
+}
+
+QComboBox QAbstractItemView {
+    border: 10px solid white;
+    selection-background-color: lightgray;
+}</string>
+         </property>
+         <property name="editable">
+          <bool>false</bool>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <item>
+          <property name="text">
+           <string>Вид доступа:</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Администратор</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Пользователь</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Охранник</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="6" column="0" alignment="Qt::AlignLeft">
+        <widget class="QPushButton" name="bt_reguser">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>200</width>
+           <height>45</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>200</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="baseSize">
+          <size>
+           <width>200</width>
+           <height>45</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Lato</family>
+           <pointsize>14</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::WheelFocus</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton:enabled{
+	background-color: white;
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 15px;
+	border-color: rgb(1, 140, 234);
+
+	font: 14pt;
+	padding: 6px;
+	color: rgb(1, 140, 234);
+ }
+ QPushButton:default {
+     border-color: navy; /* делаем кнопку по умолчанию выпуклой */
+ }
+
+QPushButton:hover{
+ 	background-color: rgb(246, 246, 246);
+}
+
+
+QPushButton:pressed {
+     background-color: rgb(240, 240, 240);
+ }</string>
+         </property>
+         <property name="text">
+          <string>Зарегистрировать</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="2">
+        <widget class="QLabel" name="lb_serverTime">
+         <property name="styleSheet">
+          <string notr="true">QLabel{ 
+	color: rgb(4, 69, 87); 
+	font: lato; 
+	font-size: 18px;
+ }</string>
+         </property>
+         <property name="text">
+          <string>LabelText</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+      <zorder>tableView</zorder>
+      <zorder>le_pass</zorder>
+      <zorder>cb_role</zorder>
+      <zorder>le_fio</zorder>
+      <zorder>le_unit</zorder>
+      <zorder>bt_reguser</zorder>
+      <zorder>bt_refresh</zorder>
+      <zorder>verticalSpacer</zorder>
+      <zorder>le_login</zorder>
+      <zorder>horizontalSpacer</zorder>
+      <zorder>lb_serverTime</zorder>
+     </widget>
+     <widget class="QWidget" name="chat">
+      <attribute name="title">
+       <string>Чат</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="notes">
+      <attribute name="title">
+       <string>Заметки</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="safetyTab">
+      <attribute name="title">
+       <string>Безопасность</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="profile">
+      <attribute name="title">
+       <string>Профиль</string>
+      </attribute>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>le_login</tabstop>
+  <tabstop>le_pass</tabstop>
+  <tabstop>cb_role</tabstop>
+  <tabstop>le_fio</tabstop>
+  <tabstop>le_unit</tabstop>
+  <tabstop>bt_reguser</tabstop>
+  <tabstop>bt_refresh</tabstop>
+  <tabstop>tableView</tabstop>
+  <tabstop>tabWidget</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
